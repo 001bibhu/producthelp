@@ -1,162 +1,180 @@
-# ProductHelp AI 🚀
+# 🚀 ProductHelp AI
 
-**Search Analytics + Content Gap Detection for Documentation Teams**
-
-ProductHelp AI helps documentation teams understand what users are searching for, what’s missing, and what needs improvement—so they can take action, not just analyze data.
+**ProductHelp AI** is an analytics and insight platform that helps product, documentation, and support teams understand what users are searching for — and identify missing or underperforming content.
 
 ---
 
-## 🔍 What Problem It Solves
+## 🌐 Live Demo
 
-Most documentation tools show:
+👉 https://producthelp.vercel.app/
 
-* What users search
-* Basic analytics
+---
 
-But they don’t answer:
+## 🧠 What Problem It Solves
 
-* What content should I create?
-* What content should I improve?
-* Why are users not finding answers?
+Teams often don’t know:
 
-**ProductHelp AI bridges that gap.**
+* What users are searching for
+* What content is missing
+* Why users are not finding answers
+* Which docs need improvement
+
+**ProductHelp AI solves this by turning search behavior into actionable insights.**
 
 ---
 
 ## ✨ Key Features
 
-### 📊 Search Analytics Dashboard
+* 📊 **Search Analytics Dashboard**
 
-* Total Searches
-* Unique Searches
-* Failed Searches (no results)
-* Low Engagement Searches
+  * Total searches, failed searches, low engagement
 
----
+* 🔍 **Missing Content Detection**
 
-### 🟥 Missing Content Detection
+  * Identify queries with no results
 
-Identifies search terms where users found no results.
+* 📉 **Low Engagement Insights**
 
-> Example:
-> Users searched “SLA breach” 12 times but no content exists.
+  * Detect content that users are not clicking
 
----
+* ⚡ **Top Actions to Take Now**
 
-### 🟨 Low Engagement Insights
+  * Prioritized recommendations
 
-Finds content that exists but isn’t helpful.
+* 🔌 **Easy Integration**
 
-> Example:
-> “Privacy policy” has high searches but low clicks.
+  * Add a lightweight script to track search queries
 
 ---
 
-### 🧠 Actionable Recommendations
+## 🏗️ Tech Stack
 
-Instead of just data, ProductHelp AI tells you:
+### Frontend
 
-* What to create
-* What to improve
+* React (Vite)
+* CSS
 
----
+### Backend
 
-### ⏱ Time-Based Filtering
+* Node.js
+* Express
 
-* Last 7 days
-* Last 30 days
-* Last 90 days
+### Deployment
 
----
-
-## 🛠 Tech Stack
-
-* Frontend: React + Vite
-* Backend: Node.js + Express
-* Data: JSON (MVP stage)
+* Frontend: Vercel
+* Backend: Render
 
 ---
 
-## 🧪 Current Status
+## 🛠️ Local Development Setup
 
-🚧 MVP (Minimum Viable Product)
+### 1. Clone the repository
 
-* Uses mock data
-* Focused on core product logic and UX
-* Ready for real data integration
-
----
-
-## 🚀 How to Run Locally
-
-### 1. Clone the repo
-
-```bash
 git clone https://github.com/001bibhu/producthelp.git
 cd producthelp
-```
 
-### 2. Install dependencies
+---
 
-```bash
+### 2. Run Backend
+
 cd backend
 npm install
-
-cd ../frontend
-npm install
-```
-
-### 3. Run the app
-
-**Terminal 1 (Backend):**
-
-```bash
-cd backend
 npm run dev
-```
 
-**Terminal 2 (Frontend):**
+👉 Runs on: http://localhost:3001
 
-```bash
+---
+
+### 3. Run Frontend
+
 cd frontend
+npm install
 npm run dev
+
+👉 Runs on: http://localhost:5173
+
+---
+
+## 🔌 Integration (How to Use ProductHelp AI)
+
+Add ProductHelp AI to your documentation site in minutes.
+
+### Step 1: Add Script
+
+```html
+<script src="https://yourdomain.com/producthelp.js"></script>
 ```
 
 ---
 
-## 🌐 Access
+### Step 2: Track Search Queries
 
-* Frontend: http://localhost:5173
-* Backend: http://localhost:3001
-
----
-
-## 🔮 Future Enhancements
-
-* Real-time search tracking script
-* Integration with documentation platforms
-* AI-powered recommendations
-* Content performance scoring
-* “View all issues” drill-down
+```javascript
+window.productHelp.track("your search query");
+```
 
 ---
 
-## 🤝 Vision
+### Step 3: View Insights
 
-To become the **decision engine for documentation teams**, helping them move from:
+Open the dashboard:
 
-> “What are users doing?”
-> to
-> “What should we fix next?”
+👉 https://producthelp.vercel.app/
 
 ---
 
-## 👤 Author
+## 🧪 Example Integration
 
-Built by 001bibhu
+```javascript
+function onSearch(query) {
+  window.productHelp.track(query);
+}
+```
 
 ---
 
-## ⭐️ If you like this project
+## ⚠️ Current Limitation
 
-Give it a star on GitHub!
+This is currently a **shared demo environment**.
+
+* Data is not isolated per user
+* Multiple users will see combined data
+
+👉 Multi-tenant support (API keys) is planned.
+
+---
+
+## 🎯 Target Users
+
+* Product Teams
+* Documentation Teams
+* Developer Experience Teams
+* Support Teams
+
+---
+
+## 🚀 Roadmap
+
+* [ ] API key-based multi-tenant support
+* [ ] Real-time tracking SDK improvements
+* [ ] AI-powered content recommendations
+* [ ] Chrome extension for tracking
+* [ ] Integration with tools like Algolia
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork the repo and submit improvements.
+
+---
+
+## 📬 Feedback
+
+If you have feedback or ideas, feel free to reach out or open an issue.
+
+---
+
+## ⭐ If you like this project
+
+Give it a star on GitHub ⭐
