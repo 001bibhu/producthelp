@@ -57,7 +57,7 @@ export default function Dashboard() {
   const [period, setPeriod] = useState("7d");
 
   useEffect(() => {
-    fetch("/api/dashboard")
+    fetch(`${import.meta.env.VITE_API_URL}/api/dashboard`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch dashboard data");
         return res.json();
