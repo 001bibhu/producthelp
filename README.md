@@ -1,8 +1,8 @@
-# ProductHelp 🚀
+# ProductHelp AI 🚀
 
 **Search Analytics + Content Gap Detection for Documentation Teams**
 
-ProductHelp helps documentation teams understand what users are searching for, what’s missing, and what needs improvement—so they can take action, not just analyze data.
+ProductHelp AI helps documentation teams understand what users are searching for, what’s missing, and what needs improvement—so they can take action, not just analyze data.
 
 ---
 
@@ -19,7 +19,7 @@ But they don’t answer:
 * What content should I improve?
 * Why are users not finding answers?
 
-**ProductHelp bridges that gap.**
+**ProductHelp AI bridges that gap.**
 
 ---
 
@@ -54,7 +54,7 @@ Finds content that exists but isn’t helpful.
 
 ### 🧠 Actionable Recommendations
 
-Instead of just data, ProductHelp tells you:
+Instead of just data, ProductHelp AI tells you:
 
 * What to create
 * What to improve

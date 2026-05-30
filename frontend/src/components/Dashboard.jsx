@@ -31,7 +31,7 @@ function Sidebar({ activeView, onNavigate }) {
     <aside className="sidebar">
       <div className="logo">
         <span className="logo-icon">⌕</span>
-        <span className="logo-text">Searchly</span>
+        <span className="logo-text">ProductHelp AI</span>
       </div>
       <nav className="nav">
         {NAV_ITEMS.map((item) => (
