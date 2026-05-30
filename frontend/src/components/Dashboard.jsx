@@ -4,15 +4,23 @@ import DataTable from "./DataTable.jsx";
 import SearchInsights from "./SearchInsights.jsx";
 import PlaceholderPage from "./PlaceholderPage.jsx";
 import PeriodFilter from "./PeriodFilter.jsx";
+import TopActionsNow from "./TopActionsNow.jsx";
+import ActionsPage from "./ActionsPage.jsx";
 import "./Dashboard.css";
 
 const VIEWS = {
   analytics: { id: "analytics", label: "Search Analytics", title: "Search Analytics" },
+  actions: { id: "actions", label: "Actions", title: "Actions" },
   "query-logs": { id: "query-logs", label: "Query Logs", title: "Query Logs" },
   indexes: { id: "indexes", label: "Indexes", title: "Indexes" },
 };
 
-const NAV_ITEMS = [VIEWS.analytics, VIEWS["query-logs"], VIEWS.indexes];
+const NAV_ITEMS = [
+  VIEWS.analytics,
+  VIEWS.actions,
+  VIEWS["query-logs"],
+  VIEWS.indexes,
+];
 
 function formatNumber(n) {
   return n.toLocaleString();
@@ -80,13 +88,16 @@ export default function Dashboard() {
 
   const { metrics, topSearches, noResultsSearches, lowClickSearches } = data;
   const isAnalytics = activeView === "analytics";
+  const isActions = activeView === "actions";
 
   return (
     <div className="dashboard">
       <Sidebar activeView={activeView} onNavigate={setActiveView} />
 
       <main className="main">
-        {isAnalytics ? (
+        {isActions ? (
+          <ActionsPage analytics={data} />
+        ) : isAnalytics ? (
           <>
             <header className="page-header">
               <div>
@@ -97,6 +108,8 @@ export default function Dashboard() {
               </div>
               <PeriodFilter value={period} onChange={setPeriod} />
             </header>
+
+            <TopActionsNow analytics={data} />
 
             <section className="metrics-grid metrics-grid--four">
               <MetricCard

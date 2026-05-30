@@ -12,8 +12,17 @@ export default function InsightCardSection({ title, subtitle, items, variant }) 
         <div className="insight-grid">
           {items.map((item) => (
             <article key={item.id} className={`action-card action-card--${variant}`}>
-              <h3 className="action-card-title">{item.term}</h3>
-              <p className="action-card-message">{item.message}</p>
+              <div className="action-card-top">
+                <h3 className="action-card-title">{item.cardTitle}</h3>
+                <span
+                  className={`priority-badge priority-badge--${item.priorityLevel}`}
+                >
+                  {item.priorityLabel}
+                </span>
+              </div>
+              <p className="action-card-term">{item.term}</p>
+              <p className="action-card-message">{item.explanation}</p>
+              <p className="action-card-action">{item.suggestedAction}</p>
             </article>
           ))}
         </div>
