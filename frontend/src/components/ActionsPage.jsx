@@ -2,6 +2,8 @@ import { useMemo, useState } from "react";
 import DataTable from "./DataTable.jsx";
 import { getAllActions } from "../utils/searchInsights.js";
 
+import PageHeader from "./PageHeader.jsx";
+
 const PRIORITY_FILTERS = [
   { value: "all", label: "All" },
   { value: "high", label: "High" },
@@ -13,7 +15,7 @@ function formatNumber(n) {
   return n.toLocaleString();
 }
 
-export default function ActionsPage({ analytics }) {
+export default function ActionsPage({ analytics, onHelpClick }) {
   const [priorityFilter, setPriorityFilter] = useState("all");
 
   const allActions = useMemo(() => getAllActions(analytics), [analytics]);
@@ -27,14 +29,11 @@ export default function ActionsPage({ analytics }) {
 
   return (
     <>
-      <header className="page-header">
-        <div>
-          <h1>Actions</h1>
-          <p className="page-subtitle">
-            All content gaps and low-engagement searches that need attention
-          </p>
-        </div>
-      </header>
+      <PageHeader
+        title="Actions"
+        subtitle="All content gaps and low-engagement searches that need attention"
+        onHelpClick={onHelpClick}
+      />
 
       <div className="actions-toolbar">
         <span className="actions-toolbar-label">Priority</span>
